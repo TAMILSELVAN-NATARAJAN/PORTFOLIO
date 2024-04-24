@@ -1,0 +1,278 @@
+
+.Navbar{
+    background-color: var(--bg-colour);
+    width:100%;
+    min-height: fit-content;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    transition: all 0.4s;
+}
+.Navbar.active{
+    background-color:var(--nav-colour);
+    width: auto;
+    min-height: fit-content;
+    position: sticky;
+    top: 0px;
+   z-index: 1;
+}
+.Navbar nav{
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+}
+.navlist-m ul li a{
+    text-decoration: none;
+    color: var(--font-colour);  
+    transition: 0.5s all;  
+}
+.navlist-m ul li a:hover{
+    color: var(--theme-colour);
+    border-bottom: 3px var(--theme-colour) solid;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.logo h2{
+    margin-left: 10px;
+    color: var(--theme-colour);
+    font-size: 40px; 
+    
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+}
+.logo h2 span{
+    font-size: 30px;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: var(--font-colour);   
+}
+
+.navlist-m ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--font-colour);
+    font-size: 18px;
+    font-weight: 500;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+    margin-left: 20px; 
+}
+.navlist-m ul li{
+    cursor: pointer;
+    font-family: "League Spartan", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style:normal;
+     font-size: larger;
+}
+
+.navlist-l ul{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--font-colour);
+    font-size: 18px;
+    font-weight: 500;
+}
+.navlist-l ul li span{
+    cursor: pointer;
+    transition: 0.6s all;
+}
+
+.navlist-l ul li span a{
+    text-decoration: none;
+    color: var(--font-colour);
+    transition: all 0.4s;
+    font-family: "League Spartan", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style:normal;
+     font-size: larger;
+}
+
+
+.navlist-l .download-icon{
+   font-size: 20px
+}
+.navlist-l ul li span:hover{
+    color: var(--theme-colour);
+    scale: 0.5;
+}
+.hire-me{
+    background-color: var(--theme-colour);
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--font-colour);
+    font-weight: 400;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+}
+.navlist-l ul li span a:hover{
+    color: var(--theme-colour);
+    border-bottom: 2px solid var(--theme-colour);
+
+}
+.navlist-l ul li button{
+    transition: 0.6s all;
+}
+.navlist-l ul li button:hover{
+    background-color: var(--font-colour);
+    color: var(--bg-colour);
+}
+.toggle .tog-btn{
+color: var(--font-colour);
+font-size: 2.5rem;
+cursor: pointer;
+display: none;
+}
+.up-arrow{
+    position: fixed;
+    right: 12px;
+    bottom: 0px;
+    color: var(--theme-colour);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.up-arrow:hover{
+    scale: 1.2;
+    color: var(--font-colour);
+}
+.theme p{
+    color: var(--font-colour);
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 5px;
+
+}
+.theme p:hover{
+    color: var(--theme-colour);
+}
+
+@media (max-width:950px){
+
+
+    .navlist-l ul{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        color: var(--font-colour);
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .navlist-l ul li span{
+        cursor: pointer;
+        transition: 0.6s all;
+       
+       
+    }
+    .navlist-l ul li button{
+        transition: 0.6s all;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width:740px){
+     
+     .navlist-l ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--font-colour);
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .navlist-l ul li button{
+        transition: 0.6s all;
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+     .navlist-m{
+       position: fixed;
+        top: 115px;
+        right: -100px;
+        display: none;
+        transition: all 0.8s;
+ 
+     }
+     .navlist-m.active{
+       position: fixed;
+        top: 115px;
+        right: 0px;
+        display: flex;
+        transition: all 0.8s;
+ 
+     }
+     .navlist-m ul{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        background-color:#1c1c1c;
+        width: 400px;
+        height: 800px;
+       border-bottom-left-radius: 30px;
+       
+
+     }
+     .navlist-m ul li{
+        margin: 20px auto;
+        font-size: 2rem;
+        
+        
+     }
+
+     .toggle .tog-btn{
+        display: block;
+        margin-right: 10px;
+        transition: 0.7s all;
+
+     }
+     .Navbar{
+        overflow: hidden;
+     }
+    
+}
+@media (max-width :498px) {
+
+     .navlist-l ul{
+       padding: 0px 10px;
+    }
+
+    .theme p{
+        color: var(--font-colour);
+        font-size: 2.6rem;
+        
+    
+    }
+}

@@ -1,0 +1,158 @@
+.Skills{
+    width: auto;
+    min-height: fit-content;
+    background-color: var(--bg-colour);
+    color: var(--font-colour);
+}
+
+.Skills .container{
+    width: auto;
+    min-height: fit-content;
+    padding: 30px 10%;
+
+}
+.Skills .container .main-title{
+    max-width: 700px;
+    margin :0px auto;
+    text-align: center;
+  
+}
+.Skills .container .main-title h1{
+    position: relative;
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: var(--font-colour);
+    margin-top: -10px;
+    display: inline-block;
+}
+.Skills .container .main-title h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--font-colour);
+    top: 125%;
+    left: 0px;
+}
+.Skills .container .main-title h1::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    background-color: var(--theme-colour);
+    top: calc(125% - 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.Skills .container .row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+.Skills .row .col{
+    flex-basis: 46%;
+}
+
+.Skills .container .row .sub-title h2{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.Skills .container .row .sub-title h2::before{
+
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: var(--font-colour);
+    top: 125%;
+    left: 0px;
+    border-radius: 5px;
+}
+
+.Skills .container .row .sub-title h2::after{
+
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 4px;
+    background-color: var(--theme-colour);
+    top: calc(125% - 1px);
+    left: 0px;
+    border-radius: 5px;
+
+}
+
+.Skills .skill .subject{
+    font-size: 18px;
+    font-weight: thin;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+
+.Skills .skill .progress-bar{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.Skills .skill .progress-bar::before{
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0px;
+    color: var(--font-colour);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.Skills .skill .progress-line{
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: var(--theme-colour);
+    border-radius: 15px;
+    top: 0px;
+    animation: animate_progress 1.5s cubic-bezier(1, 0.2, 0.5, 1) forwards;
+}
+
+@keyframes animate_progress {
+   
+   
+    100%{
+        width: 100%;
+    }
+    
+}
+.Skills .skill .progress-line::after{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--theme-colour);
+    top: 50%;
+    right: -10px;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width : 555px ){
+    .Skills .container .row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0px;
+       
+    }
+    .Skills .row .col{
+        margin-top: 50px;
+    }
+    
+}
